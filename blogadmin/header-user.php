@@ -51,10 +51,12 @@
                 $usernow = getLoggedMemberID();
                 if ($usernow == "admin") {
                     # code...show more links for admin only
-                    echo '<li><a href="titles_view.php"><i class="fa fa-desktop"></i> Web Details</a></li>
-            <li><a href="links_view.php"><i class="fa fa-link"></i> Links</a></li>
-            <li><a href="editors_choice_view.php"><i class="fa fa-trophy"></i> Editors Choice</a></li>
-            <li><a href="../adminstats"><i class="fa fa-bar-chart-o"></i> Admin Stats</a></li>';
+                    echo '
+                    <li><a href="titles_view.php"><i class="fa fa-desktop"></i> Web Details</a></li>
+                    <li><a href="links_view.php"><i class="fa fa-link"></i> Links</a></li>
+                    <li><a href="editors_choice_view.php"><i class="fa fa-trophy"></i> Editors Choice</a></li>
+                    <!--<li><a href="../adminstats"><i class="fa fa-bar-chart-o"></i> Admin Stats</a></li>-->
+                    ';
                 }
                 ?>
 
