@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?php echo ucwords('KT_BLOG ADMIN'); ?> | <?php echo(isset($x->TableTitle) ? $x->TableTitle : ''); ?></title>
+    <title><?php echo ucwords('KT-BLOG ADMIN'); ?> | <?php echo(isset($x->TableTitle) ? $x->TableTitle : ''); ?></title>
     <link id="browser_favicon" rel="shortcut icon" href="<?php echo PREPEND_PATH; ?>resources/images/logo_32.jpg">
 
     <link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/initializr/css/yeti.css">

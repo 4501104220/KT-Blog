@@ -131,9 +131,9 @@ if ($usernow == "admin") {
 <footer class="footer footer-inverse">
     <div class="container">
         <div class="text-center">
-            <small>KT_Blog <?php $current = date("Y");
+            <small>KT-Blog <?php $current = date("Y");
                 print_r($current); ?> | Brought To You by
-                <a href="http://fb.me/thangtrantt/">KT_Blog</a>
+                <a href="http://fb.me/thangtrantt/">KT-Blog</a>
             </small>
         </div>
     </div>
