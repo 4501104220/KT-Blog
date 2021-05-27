@@ -80,7 +80,11 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-3">
+
+
+
+<!--      NOT WORKING -->
+      <!--    <div class="col-lg-3">
             <div class="panel panel-primary">
               <div class="panel-heading">
                 <div class="row">
@@ -88,7 +92,7 @@
                     <i class="fa fa-bar-chart-o fa-5x"></i>
                   </div>
                   <div class="col-xs-6 text-right">
-                    <p class="announcement-heading"><?php adminstats("visitor_info","page_hits");?></p>
+                    <p class="announcement-heading"><?php /*adminstats("visitor_info","page_hits");*/?></p>
                     <p class="announcement-text"><strong>Admin Stats</strong></p>
                   </div>
                 </div>
@@ -108,3 +112,5 @@
             </div>
           </div>
         </div><!-- /.row -->
+
+    <!-- NOT WORKING -->

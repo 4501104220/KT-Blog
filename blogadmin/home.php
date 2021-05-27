@@ -3,6 +3,7 @@
 <?php @include("./hooks/links-home.php"); ?>
 
 <?php
+
 	/*
 		Classes of first and other blocks
 		---------------------------------
@@ -11,6 +12,7 @@
 			Panels: http://getbootstrap.com/components/#panels
 			Buttons: http://getbootstrap.com/css/#buttons
 	*/
+
 	$block_classes = array(
 		'first' => array(
 			'grid_column' => 'col-sm-12 col-md-8 col-lg-6',
