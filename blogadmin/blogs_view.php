@@ -81,51 +81,55 @@ $x->QueryFieldsQS = array(
     "`blogs`.`author`" => "author",
     "`blogs`.`posted`" => "posted"
 );
-$data['title'] = makeSafe($_REQUEST['title']);
-if($data['title'] == empty_lookup_value){ $data['title'] = ''; }
-$data['category'] = makeSafe($_REQUEST['category']);
-if($data['category'] == empty_lookup_value){ $data['category'] = ''; }
-$data['tags'] = makeSafe($_REQUEST['tags']);
-if($data['tags'] == empty_lookup_value){ $data['tags'] = ''; }
-$data['content'] = makeSafe($_REQUEST['content']);
-if($data['content'] == empty_lookup_value){ $data['content'] = ''; }
-$data['date'] = parseCode('<%%creationDate%%>', true, true);
-$data['author'] = parseCode('<%%creatorUsername%%>', true);
-$data['posted'] = makeSafe($_REQUEST['posted']);
-if($data['posted'] == empty_lookup_value){ $data['posted'] = ''; }
-$data['photo'] = PrepareUploadedFile('photo', 5120000,'jpg|jpeg|gif|png', false, '');
-if($data['photo']) createThumbnail($data['photo'], getThumbnailSpecs('blogs', 'photo', 'tv'));
-if($data['photo']) createThumbnail($data['photo'], getThumbnailSpecs('blogs', 'photo', 'dv'));
-if($data['title']== ''){
-    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Title': " . $Translation['field not null'] . '<br><br>';
-    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
-    exit;
-}
-if($data['category']== ''){
-    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Category': " . $Translation['field not null'] . '<br><br>';
-    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
-    exit;
-}
-if($data['tags']== ''){
-    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Tags': " . $Translation['field not null'] . '<br><br>';
-    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
-    exit;
-}
-if($data['content']== ''){
-    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Content': " . $Translation['field not null'] . '<br><br>';
-    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
-    exit;
-}
-if($data['photo']== ''){
-    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Photo': " . $Translation['field not null'] . '<br><br>';
-    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
-    exit;
-}
-if($data['posted']== ''){
-    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Status': " . $Translation['field not null'] . '<br><br>';
-    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
-    exit;
-}
+
+// Lookup fields that can be used as filterers
+$x->filterers = array('category' => 'Category');
+
+$x->QueryFrom = "`blogs` LEFT JOIN `blog_categories` as blog_categories1 ON `blog_categories1`.`id`=`blogs`.`category` ";
+$x->QueryWhere = '';
+$x->QueryOrder = '';
+
+$x->AllowSelection = 1;
+$x->HideTableView = ($perm[2] == 0 ? 1 : 0);
+$x->AllowDelete = $perm[4];
+$x->AllowMassDelete = true;
+$x->AllowInsert = $perm[1];
+$x->AllowUpdate = $perm[3];
+$x->SeparateDV = 1;
+$x->AllowDeleteOfParents = 1;
+$x->AllowFilters = 1;
+$x->AllowSavingFilters = 1;
+$x->AllowSorting = 1;
+$x->AllowNavigation = 1;
+$x->AllowNavigation = 1;
+$x->AllowPrinting = 1;
+$x->AllowCSV = 1;
+$x->RecordsPerPage = 10;
+$x->QuickSearch = 1;
+$x->QuickSearchText = "Quick Search";
+$x->ScriptFileName = "blogs_view.php";
+$x->RedirectAfterInsert = "blogs_view.php?SelectedID=#ID#";
+$x->TableTitle = "Blogs";
+$x->TableIcon = "resources/table_icons/feed.png";
+$x->PrimaryKey = "`blogs`.`id`";
+
+$x->ColWidth = array(150, 150, 150, 150, 150, 150, 150, 150);
+$x->ColCaption = array("Title", "Category", "Tags", "Content", "Photo", "Date", "Author", "Status");
+$x->ColFieldName = array('title', 'category', 'tags', 'content', 'photo', 'date', 'author', 'posted');
+$x->ColNumber = array(2, 3, 4, 5, 6, 7, 8, 9);
+
+// template paths below are based on the app main directory
+$x->Template = 'templates/blogs_templateTV.html';
+$x->SelectedTemplate = 'templates/blogs_templateTVS.html';
+$x->TemplateDV = 'templates/blogs_templateDV.html';
+$x->TemplateDVP = 'templates/blogs_templateDVP.html';
+
+$x->ShowTableHeader = 1;
+$x->ShowRecordSlots = 0;
+$x->TVClasses = "";
+$x->DVClasses = "";
+$x->HighlightColor = '#FFF0C2';
+
 // mm: build the query based on current member's permissions
 $DisplayRecords = $_REQUEST['DisplayRecords'];
 if (!in_array($DisplayRecords, array('user', 'group'))) {
