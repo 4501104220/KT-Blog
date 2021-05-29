@@ -81,7 +81,51 @@ $x->QueryFieldsQS = array(
     "`blogs`.`author`" => "author",
     "`blogs`.`posted`" => "posted"
 );
-
+$data['title'] = makeSafe($_REQUEST['title']);
+if($data['title'] == empty_lookup_value){ $data['title'] = ''; }
+$data['category'] = makeSafe($_REQUEST['category']);
+if($data['category'] == empty_lookup_value){ $data['category'] = ''; }
+$data['tags'] = makeSafe($_REQUEST['tags']);
+if($data['tags'] == empty_lookup_value){ $data['tags'] = ''; }
+$data['content'] = makeSafe($_REQUEST['content']);
+if($data['content'] == empty_lookup_value){ $data['content'] = ''; }
+$data['date'] = parseCode('<%%creationDate%%>', true, true);
+$data['author'] = parseCode('<%%creatorUsername%%>', true);
+$data['posted'] = makeSafe($_REQUEST['posted']);
+if($data['posted'] == empty_lookup_value){ $data['posted'] = ''; }
+$data['photo'] = PrepareUploadedFile('photo', 5120000,'jpg|jpeg|gif|png', false, '');
+if($data['photo']) createThumbnail($data['photo'], getThumbnailSpecs('blogs', 'photo', 'tv'));
+if($data['photo']) createThumbnail($data['photo'], getThumbnailSpecs('blogs', 'photo', 'dv'));
+if($data['title']== ''){
+    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Title': " . $Translation['field not null'] . '<br><br>';
+    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
+    exit;
+}
+if($data['category']== ''){
+    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Category': " . $Translation['field not null'] . '<br><br>';
+    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
+    exit;
+}
+if($data['tags']== ''){
+    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Tags': " . $Translation['field not null'] . '<br><br>';
+    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
+    exit;
+}
+if($data['content']== ''){
+    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Content': " . $Translation['field not null'] . '<br><br>';
+    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
+    exit;
+}
+if($data['photo']== ''){
+    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Photo': " . $Translation['field not null'] . '<br><br>';
+    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
+    exit;
+}
+if($data['posted']== ''){
+    echo StyleSheet() . "\n\n<div class=\"alert alert-danger\">" . $Translation['error:'] . " 'Status': " . $Translation['field not null'] . '<br><br>';
+    echo '<a href="" onclick="history.go(-1); return false;">'.$Translation['< back'].'</a></div>';
+    exit;
+}
 // mm: build the query based on current member's permissions
 $DisplayRecords = $_REQUEST['DisplayRecords'];
 if (!in_array($DisplayRecords, array('user', 'group'))) {
