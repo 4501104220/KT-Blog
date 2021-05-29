@@ -11,16 +11,17 @@
 </head>
 <!--cards-->
 <div class="row">
+
     <div class="col-lg-3">
-        <div class="panel panel-info">
+        <div class="panel panel-success">
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-6">
-                        <i class="fa fa-rss fa-5x"></i>
+                        <i class="fa fa-check fa-5x"></i>
                     </div>
                     <div class="col-xs-6 text-right">
-                        <p class="announcement-heading"><?php countrecords("blogs", "all"); ?></p>
-                        <p class="announcement-text"><strong>Blogs</strong></p>
+                        <p class="announcement-heading"><?php countrecords("blogs", "publish"); ?></p>
+                        <p class="announcement-text"><strong>Published</strong></p>
                     </div>
                 </div>
             </div>
@@ -37,19 +38,69 @@
         </div>
     </div>
     <div class="col-lg-3">
-        <div class="panel panel-warning">
+        <div class="panel panel-success">
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-6">
-                        <i class="fa fa-tags fa-5x"></i>
+                        <i class="fa fa-check fa-5x"></i>
                     </div>
                     <div class="col-xs-6 text-right">
-                        <p class="announcement-heading"><?php admincounter("blog_categories"); ?></p>
-                        <p class="announcement-text"><strong>Categories</strong></p>
+                        <p class="announcement-heading"><?php countrecords("blogs", "publish"); ?></p>
+                        <p class="announcement-text"><strong>Published</strong></p>
                     </div>
                 </div>
             </div>
-            <a href="blog_categories_view.php">
+            <a href="blogs_view.php">
+                <div class="panel-footer announcement-bottom">
+                    <div class="row">
+                        <div class="col-xs-6">View</div>
+                        <div class="col-xs-6 text-right">
+                            <i class="fa fa-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <i class="fa fa-check fa-5x"></i>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p class="announcement-heading"><?php countrecords("blogs", "publish"); ?></p>
+                        <p class="announcement-text"><strong>Published</strong></p>
+                    </div>
+                </div>
+            </div>
+            <a href="blogs_view.php">
+                <div class="panel-footer announcement-bottom">
+                    <div class="row">
+                        <div class="col-xs-6">View</div>
+                        <div class="col-xs-6 text-right">
+                            <i class="fa fa-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <i class="fa fa-check fa-5x"></i>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p class="announcement-heading"><?php countrecords("blogs", "publish"); ?></p>
+                        <p class="announcement-text"><strong>Published</strong></p>
+                    </div>
+                </div>
+            </div>
+            <a href="blogs_view.php">
                 <div class="panel-footer announcement-bottom">
                     <div class="row">
                         <div class="col-xs-6">View</div>
@@ -131,10 +182,7 @@ if ($usernow == "admin") {
 <footer class="footer footer-inverse">
     <div class="container">
         <div class="text-center">
-            <small>KT-Blog <?php $current = date("Y");
-                print_r($current); ?> | Brought To You by
-                <a href="http://fb.me/thangtrantt/">KT-Blog</a>
-            </small>
+
         </div>
     </div>
 </footer>
