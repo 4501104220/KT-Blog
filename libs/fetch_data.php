@@ -557,20 +557,19 @@ function getonelatest($table)
 			</a>
 			</div>
 			<div class="blog-info-middle">
-			<ul>
-			<li>
-			<a href="#">
-			<i class="far fa-calendar-alt"></i> ' . $onedata['date'] . '</a>
-			</li>
-			<li class="mx-2">
-			<a href="#">
-			<i class="far fa-check"></i> ' . $onedata['tags'] . '</a>
-			</li>
-			<li>
-			<a href="#">
-			<i class="far fa-user"></i> ' . $onedata['author'] . '</a>
-			</li>
-
+			    <ul>
+			        <li>
+			            <a href="#">
+			            <i class="far fa-calendar-alt"></i> ' . $onedata['date'] . '</a>
+			        </li>
+			        <li class="mx-2">
+			            <a href="#">
+			            <i class="far fa-check"></i> ' . $onedata['tags'] . '</a>
+			        </li>
+			        <li>
+			            <a href="#">
+			            <i class="far fa-user"></i> ' . $onedata['author'] . '</a>
+			        </li>
 			</ul>
 			</div>
 			</div>
@@ -578,6 +577,7 @@ function getonelatest($table)
 			<h3>
 			<a href="single.php?id=' . $onedata['id'] . '">' . $onedata['title'] . '</a>
 			</h3>
+			
 			<a href="single.php?id=' . $onedata['id'] . '" class="btn btn-primary read-m">Read More</a>
 			</div>';
         }
@@ -672,6 +672,7 @@ function getcategoryblogs($table, $id)
 								<h5 class="card-title ">
 									<a href="single.php?id=' . $cdata['id'] . '">' . $cdata['title'] . '</a>
 								</h5>
+				
 								<a href="single.php?id=' . $cdata['id'] . '" class="btn btn-primary read-m">Read More</a>
 							</div>
 						</div>';

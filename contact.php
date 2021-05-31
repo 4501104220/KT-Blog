@@ -4,7 +4,7 @@
 
 <head>
     <title><?php getwebname("titles");
-        echo "|";
+        echo " |";
         gettagline("titles"); ?> | Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">

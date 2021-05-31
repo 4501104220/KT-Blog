@@ -18,7 +18,7 @@
             <strong><?php
                 require_once('conn.php');
 
-                $con = mysqli_connect("localhost", "root", "", "blog_admin_db");
+                $con = mysqli_connect("localhost", "root", "", "qlblog_nhomST");
                 $sql = "SELECT COUNT(DISTINCT ip_address) AS alias FROM visitor_info";
                 $query = $con->prepare($sql);
                 $query->execute();
@@ -54,7 +54,7 @@
                         include("./connect.php");
                         try {
                             //connect to mysql
-                            $dsn = 'mysql:host=localhost;dbname=blog_admin_db';//dbname and host
+                            $dsn = 'mysql:host=localhost;dbname=qlblog_nhomST';//dbname and host
                             $username = 'root';//username
                             $password = '';//password
 

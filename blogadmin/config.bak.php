@@ -2,7 +2,7 @@
 	$dbServer = 'localhost';
 	$dbUsername = 'root';
 	$dbPassword = '';
-	$dbDatabase = 'blog_admin_db';
+	$dbDatabase = 'qlblog_nhomST';
 
 	$adminConfig = array(
 		'adminUsername' => "admin",

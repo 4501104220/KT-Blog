@@ -1,7 +1,7 @@
 <?php
 include("db.php");
 
-$con = mysqli_connect("localhost", "root", "", "blog_admin_db");
+$con = mysqli_connect("localhost", "root", "", "qlblog_nhomST");
 
 
 $sql = "SELECT * FROM visitor_info ORDER BY id";

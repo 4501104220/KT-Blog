@@ -3,7 +3,7 @@
 <html lang="zxx">
 <head>
     <title><?php getwebname("titles");
-        echo "|";
+        echo " |";
         gettagline("titles"); ?>| About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -55,12 +55,22 @@
                             <img src="images/b5.jpg" class="img-fluid" alt="">
                         </a>
                     </div>
+
                     <h3>
                         <?php getwebname("titles");
-                        echo "|";
+                        echo " |";
                         gettagline("titles"); ?>
                     </h3>
+
                     <p><?php getdetaileddescription("titles"); ?></p>
+
+                    <p>LỚP HỌC PHẦN: PHÁT TRIỂN ỨNG DỤNG WEB (2021COMP130305)
+                        </br>
+                        •	Thành viên nhóm ST:</br>
+                        - Trần Quốc Thắng – 4501104220</br>
+                        - Văn Thạch Trường Khánh – 4501104111
+                    </p>
+
                 </div>
             </div>
             <!--//left-->
@@ -85,13 +95,7 @@
                                     <i class="fab fa-facebook-f"></i>
                                     <span class="count"></span> Facebook</a>
                             </li>
-                            <!--                            <li>-->
-                            <!--                                <a class="dribble" href="-->
-                            <?php //getlinks("links", "dribble"); ?><!--">-->
-                            <!--                                    <i class="fab fa-dribbble"></i>-->
-                            <!---->
-                            <!--                                    <span class="count"></span> Dribble</a>-->
-                            <!--                            </li>-->
+
                             <li>
                                 <a class="pin" href="<?php getlinks("links", "instagram"); ?>">
                                     <i class="fab fa-instagram"></i>
@@ -148,14 +152,6 @@
 
 <script>
     $(document).ready(function () {
-        /*
-                                var defaults = {
-                                      containerID: 'toTop', // fading element id
-                                    containerHoverID: 'toTopHover', // fading element hover id
-                                    scrollSpeed: 1200,
-                                    easingType: 'linear'
-                                 };
-                                 */
 
         $().UItoTop({
             easingType: 'easeOutQuart'

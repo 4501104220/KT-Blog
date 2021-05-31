@@ -1,7 +1,7 @@
 <?php
 include("db.php");
 
-$con = mysqli_connect("localhost", "root", "", "blog_admin_db");
+$con = mysqli_connect("localhost", "root", "", "qlblog_nhomST");
 $sql = "SELECT * FROM page_hits ORDER BY page";
 
 if ($result = mysqli_query($con, $sql)) {

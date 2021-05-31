@@ -1,10 +1,19 @@
 <!--footer-->
-<footer>
+<footer xmlns="http://www.w3.org/1999/html">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 footer-grid-agileits-w3ls text-left">
                 <h3>About Us</h3>
                 <p><?php getshortdescription("titles"); ?></p>
+
+                <p>
+                    LỚP HỌC PHẦN: PHÁT TRIỂN ỨNG DỤNG WEB (2021COMP130305)
+                    </br>
+                    •	Thành viên nhóm ST:</br>
+                    - Trần Quốc Thắng – 4501104220</br>
+                    - Văn Thạch Trường Khánh – 4501104111
+                </p>
+
                 <div class="read">
                     <a href="about.php" class="btn btn-primary read-m">Read More</a>
                 </div>

@@ -7,7 +7,7 @@ require_once('database/db.php');//db config file
 <html lang="zxx">
 <head>
     <title>Search|<?php getwebname("titles");
-        echo "|";
+        echo " |";
         gettagline("titles"); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
