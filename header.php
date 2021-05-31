@@ -5,7 +5,7 @@
             <div class="col-md-4 logo text-left">
                 <a class="navbar-brand" href="index.php">
                     <img src="images/logo_32.jpg" class="img-fluid" alt="">
-                    KT_BLOG</a>
+                    KT-BLOG</a>
             </div>
             <div class="col-md-4 top-forms text-center mt-lg-3 mt-md-1 mt-0">
                 <span>Welcome Back!</span>
@@ -92,7 +92,6 @@
                     <button class="btn btn1 my-2 my-sm-0" type="submit" name="submit"><i class="fas fa-search"></i>
                     </button>
                 </form>
-
             </div>
         </nav>
     </div>

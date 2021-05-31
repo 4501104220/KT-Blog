@@ -73,7 +73,7 @@
 
             <div class="w3layouts-agile-copyrightbottom">
                 <p>KT-Blog <?php $current = date("Y");
-                    print_r($current); ?> | Brought To You by
+                    print_r($current); ?> | Brought to you by
                     <a href="http://fb.me/thangtrantt/">KT-Blog</a>
                 </p>
             </div>

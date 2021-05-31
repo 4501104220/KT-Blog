@@ -1,5 +1,5 @@
 
 		</div><!-- /div class="container" -->
 		</body>
-	</html>w
+	</html>
 <?php exit; ?>

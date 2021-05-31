@@ -3,7 +3,7 @@
 <html lang="zxx">
 <head>
     <title><?php getwebname("titles");
-        echo "|";
+        echo " |";
         gettagline("titles"); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -153,11 +153,8 @@
             <aside class="col-lg-4 agileits-w3ls-right-blog-con text-left">
                 <div class="tech-btm">
                     <h4>Editor's Choice</h4>
-
                     <?php geteditorschoice("editors_choice"); ?>
-
                 </div>
-
             </aside>
             <!--//right-->
         </div>
@@ -263,7 +260,6 @@
             scrollSpeed: 1200,
             easingType: 'linear'
         };
-
 
         $().UItoTop({
             easingType: 'easeOutQuart'
