@@ -82,7 +82,7 @@ $result = $pdo_statement->fetchAll();
 </div>
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
     </li>
     <li class="breadcrumb-item active">Search</li>
 </ol>
