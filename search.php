@@ -94,14 +94,14 @@ $result = $pdo_statement->fetchAll();
         <div class="inner-sec">
             <?php if ($row_count == 0) {
                 # code...
-                echo "<p style=color:#E9573F><b>sorry your search for:<u style=color:black>$search_keyword</u> returned zero results</b></p>";
+                echo "<p style=color:#E9573F><b>Sorry your search for: <u style=color:black>$search_keyword</u> returned zero results</b></p>";
                 echo "<p><b style=color:#4FC1E9>Suggestions<b><br>Your search item is not available on Our Website<br>Try being more specific with key words<br>Enter key word using title<br>Try search using category<br>Try again later<br></p>";
                 echo "<p><a href=\"http://www.google.com/search?q="
                     . $search_keyword . "\" target=\"_blank\" title=\"Look up 
     						" . $search_keyword . " on Google\" style=color:#37BC9B>Click here</a> to try the 
     						search on google</p>";
             } else {
-                echo "<p style=color:#4FC1E9><b>you searched for:<u style=color:black> $search_keyword</u></b></p>";
+                echo "<p style=color:#4FC1E9><b>You searched for: <u style=color:black> $search_keyword</u></b></p>";
                 echo "<p style=color:#37BC9B><b>Results($row_count)..</b></p>";
             }
             ?>
@@ -145,7 +145,6 @@ $result = $pdo_statement->fetchAll();
                         }
                     }
                     ?>
-
                     <?php echo $per_page_html; ?>
                 </div>
                 <!--//left-->
@@ -178,16 +177,7 @@ $result = $pdo_statement->fetchAll();
 
 <script>
     $(document).ready(function () {
-        /*
-                                var defaults = {
-                                      containerID: 'toTop', // fading element id
-                                    containerHoverID: 'toTopHover', // fading element hover id
-                                    scrollSpeed: 1200,
-                                    easingType: 'linear'
-                                 };
-                                */
-
-        $().UItoTop({
+             $().UItoTop({
             easingType: 'easeOutQuart'
         });
 
