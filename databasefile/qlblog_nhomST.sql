@@ -322,7 +322,7 @@ CREATE TABLE `membership_users` (
 
 INSERT INTO `membership_users` (`memberID`, `passMD5`, `email`, `signupDate`, `groupID`, `isBanned`, `isApproved`, `custom1`, `custom2`, `custom3`, `custom4`, `comments`, `pass_reset_key`, `pass_reset_expiry`) VALUES
 ('admin', '21232f297a57a5a743894a0e4a801fc3', '4501104220@student.hcmue.edu.vn', '2021-03-26', 2, 0, 1, 'Admin', '', '', '', 'Admin member created automatically on 2021-03-26\nmember updated his profile on 05/29/2021, 11:11 am from IP address 127.0.0.1\nmember updated his profile on 05/29/2021, 11:12 am from IP address 127.0.0.1\nmember updated his profile on 05/29/2021, 11:12 am from IP address 127.0.0.1', NULL, NULL),
-('demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 'demo@kt-blog.com', '2021-05-29', 2, 0, 1, 'Demo', '', '', '', '', NULL, NULL),
+('demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 'demo@kt-blog.gq', '2021-05-29', 2, 0, 1, 'Demo', '', '', '', '', NULL, NULL),
 ('guest', NULL, NULL, '2021-03-26', 1, 0, 1, NULL, NULL, NULL, NULL, 'Anonymous member created automatically on 2021-03-26', NULL, NULL),
 ('khanh', '46c9a651ec34e9118b64e72ae13b067f', '4501104111@student.hcmue.edu.vn', '2021-03-26', 3, 0, 1, 'Khanh Van', '', '', '', 'member signed up through the registration form.', NULL, NULL),
 ('thang', '6e0c130ca8cf53a2473bd88044b83da9', '4501104220@student.hcmue.edu.vn', '2021-04-13', 3, 0, 1, 'Thang Tran', '', '', '', 'member signed up through the registration form.', '6933e0619094b6d1cc89b6d5c7bc06ef', 1622361830);
@@ -405,7 +405,7 @@ CREATE TABLE `titles` (
 --
 
 INSERT INTO `titles` (`id`, `website_name`, `tagline`, `icon`, `keywords`, `short_description`, `bannertext1`, `bannertext2`, `bannertext3`, `bannertext4`, `detailed_description`, `address`, `email`, `phone`, `googlemap`) VALUES
-(1, 'KT-Blog', 'Blog Cho Mọi Người', 'ic_logo.png', 'blog,tech blog,story,technology news,fantastic blog', 'KT-Blog | Blog Cho Mọi Người', 'Sáng tạo cuộc sống mà <span> bạn mong muốn</span>', 'We try harder – Chúng tôi  <span>cố gắng hơn</span>', 'Nghĩ là dễ. Làm rất khó.<span>Để hành động như người ta nghĩ là khó nhất.</span>', 'Think different? – Nghĩ khác<span>_Apple_</span>', 'KT-Blog', 'Ho Chi Minh city, Vietnam', 'contact@kt-blog.com', '090999999', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1003414.4871399686!2d106.12309514508017!3d10.766213980208537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eefdb25d923%3A0x4bcf54ddca2b7214!2sHo%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2sin!4v1618656128597!5m2!1sen!2sin');
+(1, 'KT-Blog', 'Blog Cho Mọi Người', 'ic_logo.png', 'blog,tech blog,story,technology news,fantastic blog', 'KT-Blog | Blog Cho Mọi Người', 'Sáng tạo cuộc sống mà <span> bạn mong muốn</span>', 'We try harder – Chúng tôi  <span>cố gắng hơn</span>', 'Nghĩ là dễ. Làm rất khó.<span>Để hành động như người ta nghĩ là khó nhất.</span>', 'Think different? – Nghĩ khác<span>_Apple_</span>', 'KT-Blog', 'Ho Chi Minh city, Vietnam', 'contact@kt-blog.gq', '090999999', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1003414.4871399686!2d106.12309514508017!3d10.766213980208537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eefdb25d923%3A0x4bcf54ddca2b7214!2sHo%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2sin!4v1618656128597!5m2!1sen!2sin');
 
 -- --------------------------------------------------------
 
